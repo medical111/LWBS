@@ -1767,7 +1767,7 @@
     <!-- ===== MAIN APP ===== -->
     <div id="screen-app">
       <!-- Sidebar -->
-      <div class="sidebar" id="sidebar">
+      <div class="sidebar hidden lg:flex" id="sidebar">
         <div class="px-6 py-2 logo-container flex items-center">
           <div class="flex items-center justify-between w-full">
             <div
@@ -2241,7 +2241,7 @@
 
       <!-- Topbar -->
       <header
-        class="bg-white dark:bg-slate-900 font-sans text-sm tracking-tight docked full-width top-0 border-b border-slate-200 dark:border-slate-800 flat no shadows fixed right-0 left-64 h-16 flex items-center justify-between px-6 z-40 transition-all"
+        class="bg-white dark:bg-slate-900 font-sans text-sm tracking-tight docked full-width top-0 border-b border-slate-200 dark:border-slate-800 flat no shadows fixed right-0 left-64 h-16 flex items-center justify-between px-6 z-40 transition-all hidden lg:flex"
         id="top-header"
       >
         <div class="flex items-center gap-2 flex-1">
@@ -2289,7 +2289,7 @@
       </header>
 
       <!-- Content -->
-      <div class="content" id="main-content">
+      <div class="content hidden lg:block" id="main-content">
         <div
           id="patient-banner"
           class="mx-auto flex flex-col gap-grid-gutter"
