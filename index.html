@@ -7133,8 +7133,8 @@
                 </tr>
                 <tr>
                   <td style="font-weight: 600">Aeromedical Board</td>
-                  <td data-date="2022-11-21">21 Nov 2020</td>
-                  <td data-date="2023-04-02">02 Apr 2021</td>
+                  <td data-date="2020-11-21">21 Nov 2020</td>
+                  <td data-date="2021-04-02">02 Apr 2021</td>
                   <td>Hendon Camp MC</td>
                   <td>
                     <span style="color: #dc2626; font-size: 12.5px"
@@ -7224,7 +7224,7 @@
                     <div>
                       <label
                         for="filter-aces-outcome"
-                        class="text-left text-[11.5px] font-semibold uppercase tracking-wider text-[var(--gray-400)]"
+                        class="w-full text-left text-[11.5px] font-semibold uppercase tracking-wider text-[var(--gray-400)]"
                         >Outcome</label
                       >
                       <select
@@ -7245,21 +7245,15 @@
                     >
                     <div class="flex flex-col items-center gap-2">
                       <div class="flex justify-between items-center w-full">
-                        <span
-                          class="text-[10px] font-mono font-medium tracking-wider text-slate-400 shrink-0 w-8"
-                          >FROM</span
-                        >
                         <input
                           class="w-[90%] px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
                           id="aces-filter-start-date-from"
                           type="date"
                           aria-label="Start from date"
                         />
-                      </div>
-                      <div class="flex justify-between items-center w-full">
                         <span
-                          class="text-[10px] font-mono font-medium tracking-wider text-slate-400 shrink-0 w-8"
-                          >TO</span
+                          class="text-[14px] font-mono font-bold tracking-wider text-slate-400 shrink-0 w-8 text-center"
+                          >-</span
                         >
                         <input
                           class="w-[90%] px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
@@ -7278,21 +7272,15 @@
                     >
                     <div class="flex flex-col items-center gap-2">
                       <div class="flex justify-between items-center w-full">
-                        <span
-                          class="text-[10px] font-mono font-medium tracking-wider text-slate-400 shrink-0 w-8"
-                          >FROM</span
-                        >
                         <input
                           class="w-[90%] px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
                           id="aces-filter-end-date-from"
                           type="date"
                           aria-label="End from date"
                         />
-                      </div>
-                      <div class="flex justify-between items-center w-full">
                         <span
-                          class="text-[10px] font-mono font-medium tracking-wider text-slate-400 shrink-0 w-8"
-                          >TO</span
+                          class="text-[14px] font-mono font-bold tracking-wider text-slate-400 shrink-0 w-8 text-center"
+                          >-</span
                         >
                         <input
                           class="w-[90%] px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
@@ -7302,25 +7290,6 @@
                         />
                       </div>
                     </div>
-                  </div>
-                  <div>
-                    <label
-                      for="filter-aces-mc"
-                      class="text-left text-[11.5px] font-semibold uppercase tracking-wider text-[var(--gray-400)]"
-                      >Submitting MC</label
-                    >
-                    <select
-                      class="w-full px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                      id="filter-aces-mc"
-                    >
-                      <option value="">All</option>
-                      <option value="Nee Soon Camp MC">Nee Soon Camp MC</option>
-                      <option value="Kranji Camp MC">Kranji Camp MC</option>
-                      <option value="Hendon Camp MC">Hendon Camp MC</option>
-                      <option value="Mandai Hill Camp MC">
-                        Mandai Hill Camp MC
-                      </option>
-                    </select>
                   </div>
                 </div>
                 <div class="flex justify-end gap-3">
@@ -7511,7 +7480,6 @@
                   </th>
                   <th>MO 1</th>
                   <th>MO 2</th>
-                  <th>SUBMITTING MC</th>
                 </tr>
               </thead>
               <tbody id="aces-table-body">
@@ -7522,16 +7490,14 @@
                   <td data-date="2024-02-10">10 Feb 2024</td>
                   <td>Medical Officer 1</td>
                   <td>Medical Officer 2</td>
-                  <td>Mandai Hill Camp MC</td>
                 </tr>
                 <tr>
                   <td style="font-weight: 600">ACES</td>
                   <td><span class="badge badge-red">UNFIT</span></td>
-                  <td data-date="2022-11-21">21 Nov 2020</td>
-                  <td data-date="2023-04-02">02 Apr 2021</td>
+                  <td data-date="2020-11-21">21 Nov 2020</td>
+                  <td data-date="2021-04-02">02 Apr 2021</td>
                   <td>Medical Officer 3</td>
                   <td>Medical Officer 4</td>
-                  <td>Hendon Camp MC</td>
                 </tr>
               </tbody>
             </table>
@@ -11413,9 +11379,6 @@
             const endToVal = document
               .getElementById("aces-filter-end-date-to")
               .value.trim();
-            const submittingMCVal = document
-              .getElementById("filter-aces-mc")
-              .value.trim();
 
             const rows = resultsTable.querySelectorAll("tbody tr");
             let visibleCount = 0;
@@ -11432,8 +11395,6 @@
               const endorseDateStr =
                 row.cells[3].getAttribute("data-date") ||
                 row.cells[3].textContent.trim();
-
-              const submittingMCText = row.cells[6].textContent.trim();
 
               let show = true;
 
@@ -11473,14 +11434,6 @@
                     show = false;
                   if (endToVal && endorseDate > new Date(endToVal))
                     show = false;
-                }
-              }
-
-              if (submittingMCVal) {
-                const normalizedMCFromRow = submittingMCText.toLowerCase();
-                const normalizedMCFromFilter = submittingMCVal.toLowerCase();
-                if (!normalizedMCFromRow.includes(normalizedMCFromFilter)) {
-                  show = false;
                 }
               }
 
