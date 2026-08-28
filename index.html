@@ -8439,7 +8439,7 @@
 
           <!-- SOC Summary -->
           <div>
-            <!-- <div id="amb-date" class="hidden modal-field">
+            <div id="amb-date" class="hidden modal-field">
               <div class="flex flex-col gap-2">
                 <span
                   class="text-[11px] font-semibold uppercase tracking-wider text-gray-400"
@@ -8447,10 +8447,10 @@
                   Date of AMB
                 </span>
                 <div class="flex gap-1.5 text-xs">
-                  <span class="font-medium text-gray-800">12 Oct 2026</span>
+                  <span class="font-medium text-gray-800">01 Jan 2024</span>
                 </div>
               </div>
-            </div> -->
+            </div>
             <div id="medboard-pes-mgs-score" class="modal-field"></div>
             <div id="pd-section" class="hidden modal-field">
               <div class="flex flex-col gap-[14px]">
@@ -8633,7 +8633,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal-field">
+            <div id="medboard-decision" class="modal-field">
               <label>Medical Board Decision</label>
               <span
                 class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container w-fit uppercase"
@@ -8648,8 +8648,8 @@
               <label>Recommendations of the board</label>
               <div class="modal-notes">
                 In view of the board discussion, the Aeromedical Board convened
-                on 12 Oct 2026 recommended that Tan Hong Wei will return to
-                duties on 19 Oct 2026.
+                on 01 Jan 2024 recommended that Tan Hong Wei will return to
+                duties on 15 Jan 2024.
               </div>
             </div>
             <div id="medboard-board-members" class="modal-field"></div>
@@ -9655,14 +9655,15 @@
         const socOne = document.getElementById("soc-board-one");
         const socTwo = document.getElementById("soc-board-two");
         const pesOrMGS = document.getElementById("medboard-pes-mgs-score");
+        const medBoardDecision = document.getElementById("medboard-decision");
         const boardMembersSection = document.getElementById(
           "medboard-board-members",
         );
         const issueMC = document.getElementById("medboard-issue-mc");
 
         //Aeromedical
-        // const ambDate = document.getElementById("amb-date");
-        // ambDate.classList.add("hidden");
+        const ambDate = document.getElementById("amb-date");
+        ambDate.classList.add("hidden");
         const aeroMedboardRec = document.getElementById(
           "aeromedical-board-recommendation",
         );
@@ -9677,6 +9678,8 @@
         socTwo.textContent = medboard;
 
         boardMembersSection.innerHTML = boardMembers["rest"];
+        pesOrMGS.classList.remove("hidden");
+        medBoardDecision.classList.remove("hidden");
         issueMC.classList.remove("hidden");
         if (medboard === "PD Board") {
           pesOrMGS.innerHTML = medboardPESMGS["PES"];
@@ -9684,9 +9687,11 @@
         } else {
           pesOrMGS.innerHTML = medboardPESMGS["MGS"];
           if (medboard === "Aeromedical Board") {
-            // ambDate.classList.remove("hidden");
+            ambDate.classList.remove("hidden");
             aeroMedboardRec.classList.remove("hidden");
             boardMembersSection.innerHTML = boardMembers["aeromedical"];
+            pesOrMGS.classList.add("hidden");
+            medBoardDecision.classList.add("hidden");
             issueMC.classList.add("hidden");
           }
         }
