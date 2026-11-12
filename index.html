@@ -1311,18 +1311,6 @@
         transition: all 0.2s ease;
       }
 
-      /* .vital-box:hover {
-        border-color: var(--blue-primary);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      }
-
-      .vital-box.active {
-        border-color: var(--blue-primary);
-        background-color: white;
-        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
-      } */
-
       .vital-box .vl {
         font-size: 11px;
         color: var(--gray-400);
@@ -1345,99 +1333,6 @@
         color: var(--gray-400);
       }
 
-      .vitals-history-panel {
-        margin-top: 16px;
-        background: white;
-        border: 1.5px solid var(--gray-200);
-        border-radius: 10px;
-        padding: 16px;
-      }
-
-      .panel-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 14px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--gray-200);
-      }
-
-      .panel-title {
-        font-size: 13px;
-        font-weight: 700;
-        color: var(--gray-800);
-      }
-
-      .diagnosis-badge {
-        font-size: 11px;
-        font-weight: 500;
-        color: var(--gray-600);
-        background: var(--gray-100);
-        padding: 2px 8px;
-        border-radius: 4px;
-        margin-left: 8px;
-      }
-
-      /* Timeline Cards Layout */
-      .history-timeline {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        overflow-x: auto;
-        padding-bottom: 4px;
-      }
-
-      .timeline-step {
-        flex: 1;
-        min-width: 110px;
-        background: var(--gray-100);
-        border: 1px solid var(--gray-200);
-        border-radius: 8px;
-        padding: 10px;
-        text-align: center;
-        position: relative;
-      }
-
-      .timeline-step.current {
-        border-color: var(--blue-primary);
-        background: white;
-        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
-      }
-
-      .timeline-step.high {
-        background: var(--red-bg);
-        border-color: rgba(239, 68, 68, 0.3);
-      }
-
-      .timeline-step .ts-date {
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--gray-400);
-        text-transform: uppercase;
-      }
-
-      .timeline-step .ts-val {
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--gray-800);
-        margin: 4px 0;
-      }
-
-      .timeline-step.high .ts-val {
-        color: var(--red);
-      }
-
-      .timeline-step .ts-tag {
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--gray-600);
-      }
-
-      .timeline-arrow {
-        color: var(--gray-300);
-        font-weight: 700;
-        font-size: 14px;
-      }
       .diagnosis-box {
         background: var(--blue-xlight);
         border: 1px solid var(--blue-light);
@@ -2209,21 +2104,6 @@
               <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
             <span class="nav-text">VACCINATION</span>
-          </div>
-
-          <div class="nav-item" data-nav="vision" onclick="navigate('vision')">
-            <svg
-              width="17"
-              height="17"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
-            <span class="nav-text">VISION</span>
           </div>
           <div class="relative">
             <div
@@ -3000,7 +2880,7 @@
                 <div
                   class="grid grid-cols-1 gap-2 mb-4 px-2 pb-2 max-h-[300px] overflow-y-auto"
                 >
-                  <div>
+                  <!-- <div>
                     <label
                       for="filter-visit-type"
                       class="text-left text-[11.5px] font-semibold uppercase tracking-wider text-[var(--gray-400)] block mb-1"
@@ -3015,7 +2895,7 @@
                       <option value="REPORT SICK">REPORT SICK</option>
                       <option value="HSP">HSP</option>
                     </select>
-                  </div>
+                  </div> -->
                   <div>
                     <label
                       for="filter-gender"
@@ -3109,7 +2989,7 @@
                 <tr>
                   <th>Patient Name</th>
                   <th>NRIC</th>
-                  <th>Visit Type</th>
+                  <!-- <th>Visit Type</th> -->
                   <th>Gender</th>
                   <th onclick="handleSearchSort('dob')" style="cursor: pointer">
                     Date of Birth <span id="sort-icon-dob">⇅</span>
@@ -3131,12 +3011,9 @@
                     <div style="font-weight: 600; color: #1e293b">
                       Tan Hong Wei
                     </div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-982310
-                    </div>
                   </td>
                   <td>S1234567A</td>
-                  <td><span class="badge badge-purple">FFI</span></td>
+                  <!-- <td><span class="badge badge-purple">FFI</span></td> -->
                   <td><span class="gender-badge gender-male">MALE</span></td>
                   <td data-date="1985-05-15">15 May 1985</td>
                   <td data-date="2023-10-10">10 Oct 2023</td>
@@ -3149,12 +3026,9 @@
                     <div style="font-weight: 600; color: #1e293b">
                       Tan Ah Teck
                     </div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-320567
-                    </div>
                   </td>
                   <td>S9876543Z</td>
-                  <td><span class="badge badge-orange">HSP</span></td>
+                  <!-- <td><span class="badge badge-orange">HSP</span></td> -->
                   <td><span class="gender-badge gender-male">MALE</span></td>
                   <td data-date="1985-09-08">08 Sep 1997</td>
                   <td data-date="2023-10-09">09 Oct 2023</td>
@@ -3167,12 +3041,9 @@
                     <div style="font-weight: 600; color: #1e293b">
                       Lim Ai Ling
                     </div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-442190
-                    </div>
                   </td>
                   <td>T8765432B</td>
-                  <td><span class="badge badge-green">REPORT SICK</span></td>
+                  <!-- <td><span class="badge badge-green">REPORT SICK</span></td> -->
                   <td>
                     <span class="gender-badge gender-female">FEMALE</span>
                   </td>
@@ -3187,12 +3058,9 @@
                     <div style="font-weight: 600; color: #1e293b">
                       S. Muralitharan
                     </div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-109283
-                    </div>
                   </td>
                   <td>S4567890C</td>
-                  <td><span class="badge badge-orange">HSP</span></td>
+                  <!-- <td><span class="badge badge-orange">HSP</span></td> -->
                   <td><span class="gender-badge gender-male">MALE</span></td>
                   <td data-date="1978-01-04">04 Jan 1978</td>
                   <td data-date="2023-09-25">25 Sep 2023</td>
@@ -3200,12 +3068,9 @@
                 <tr onclick="selectPatient('John Doe')" style="cursor: pointer">
                   <td>
                     <div style="font-weight: 600; color: #1e293b">John Doe</div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-123467
-                    </div>
                   </td>
                   <td>S9023123Y</td>
-                  <td><span class="badge badge-green">REPORT SICK</span></td>
+                  <!-- <td><span class="badge badge-green">REPORT SICK</span></td> -->
                   <td><span class="gender-badge gender-male">MALE</span></td>
                   <td data-date="1978-01-05">05 Jan 1978</td>
                   <td data-date="2024-10-22">22 Oct 2024</td>
@@ -3218,12 +3083,9 @@
                     <div style="font-weight: 600; color: #1e293b">
                       Lim Boon Kong
                     </div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-112345
-                    </div>
                   </td>
                   <td>S9023432Z</td>
-                  <td><span class="badge badge-purple">FFI</span></td>
+                  <!-- <td><span class="badge badge-purple">FFI</span></td> -->
                   <td><span class="gender-badge gender-male">MALE</span></td>
                   <td data-date="1994-01-21">21 Jan 1994</td>
                   <td data-date="2022-09-15">15 Sep 2022</td>
@@ -3236,12 +3098,9 @@
                     <div style="font-weight: 600; color: #1e293b">
                       Ong Wei Min
                     </div>
-                    <div style="font-size: 12px; color: #94a3b8">
-                      PID-312445
-                    </div>
                   </td>
                   <td>S1234567B</td>
-                  <td><span class="badge badge-purple">FFI</span></td>
+                  <!-- <td><span class="badge badge-purple">FFI</span></td> -->
                   <td><span class="gender-badge gender-male">MALE</span></td>
                   <td data-date="1996-08-22">22 Aug 1996</td>
                   <td data-date="2024-08-15">15 Aug 2024</td>
@@ -3249,7 +3108,7 @@
               </tbody>
             </table>
             <div class="table-footer" id="search-footer">
-              <span id="pagination-info">Showing 1 to 5 of 6 records</span>
+              <span id="pagination-info">Showing 1 to 5 of 7 records</span>
               <div class="pagination" id="search-pagination"></div>
             </div>
           </div>
@@ -4883,13 +4742,6 @@
         <!-- VITALS -->
         <div class="screen" id="page-vitals">
           <div class="card">
-            <div class="results-header relative inline-block w-full">
-              <div class="flex justify-between items-center">
-                <div>
-                  <span class="results-title">Vitals</span>
-                </div>
-              </div>
-            </div>
             <div class="grid grid-cols-3 gap-6">
               <div class="card flex items-center gap-3">
                 <div
@@ -4932,6 +4784,16 @@
                   >
                     170 CM
                   </p>
+                  <span
+                    style="
+                      font-size: 11px;
+                      font-weight: 500;
+                      color: #94a3b8;
+                      margin-top: 4px;
+                    "
+                  >
+                    Last updated: 12 Oct 2023, 14:30
+                  </span>
                 </div>
               </div>
               <div class="card flex items-center gap-3">
@@ -4975,6 +4837,16 @@
                   >
                     60 KG
                   </p>
+                  <span
+                    style="
+                      font-size: 11px;
+                      font-weight: 500;
+                      color: #94a3b8;
+                      margin-top: 4px;
+                    "
+                  >
+                    Last updated: 12 Oct 2023, 14:30
+                  </span>
                 </div>
               </div>
               <div class="card flex items-center gap-3">
@@ -5018,6 +4890,93 @@
                   >
                     20.8
                   </p>
+                  <span
+                    style="
+                      font-size: 11px;
+                      font-weight: 500;
+                      color: #94a3b8;
+                      margin-top: 4px;
+                    "
+                  >
+                    Last updated: 12 Oct 2023, 14:30
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="results-header relative inline-block w-full">
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="results-title">Vitals</span>
+                </div>
+                <button
+                  id="vitals-filter-toggle-btn"
+                  class="btn btn-outline btn-sm btn-icon"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <line x1="8" y1="12" x2="16" y2="12" />
+                    <line x1="10" y1="18" x2="14" y2="18" />
+                  </svg>
+                  Filter
+                </button>
+              </div>
+              <div
+                id="vitals-advanced-filter-panel"
+                class="hidden absolute right-0 mt-2 top-full border border-outline-variant bg-[#f1f5f9] p-4 rounded-xl shadow-xl z-50"
+              >
+                <div
+                  class="grid grid-cols-1 gap-2 mb-4 px-2 pb-2 max-h-[300px] overflow-y-auto"
+                >
+                  <div>
+                    <label
+                      for="vitals-filter-visit-date-from"
+                      class="text-left text-[11.5px] font-semibold uppercase tracking-wider text-[var(--gray-400)]"
+                      >Visit Date</label
+                    >
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="flex justify-between items-center w-full">
+                        <input
+                          class="px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                          id="vitals-filter-visit-date-from"
+                          type="date"
+                          aria-label="Visit from date"
+                        />
+                        <span
+                          class="text-[14px] font-mono font-bold tracking-wider text-slate-400 shrink-0 w-8 text-center"
+                          >-</span
+                        >
+                        <input
+                          class="px-3 py-2 border border-outline-variant bg-white rounded text-[11.5px] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
+                          id="vitals-filter-visit-date-to"
+                          type="date"
+                          aria-label="Visit to date"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end gap-3">
+                  <button
+                    type="button"
+                    class="px-4 py-2 text-sm font-medium text-on-surface-variant hover:bg-slate-100 rounded transition-colors"
+                    id="vitals-reset-filters"
+                  >
+                    Reset
+                  </button>
+                  <button
+                    type="button"
+                    class="px-6 py-2 bg-primary text-white text-sm font-medium rounded hover:bg-primary-container transition-colors shadow-sm"
+                    id="vitals-apply-filters"
+                  >
+                    Apply Filters
+                  </button>
                 </div>
               </div>
             </div>
@@ -5128,97 +5087,6 @@
                 <div class="h-44 w-full">
                   <canvas id="chartBPMean"></canvas>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- VISION -->
-        <div class="screen" id="page-vision">
-          <div class="card">
-            <div class="results-header relative inline-block w-full">
-              <div class="flex justify-between items-center">
-                <div>
-                  <span class="results-title">Vision</span>
-                </div>
-                <button
-                  id="vision-filter-toggle-btn"
-                  class="btn btn-outline btn-sm btn-icon"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <line x1="4" y1="6" x2="20" y2="6" />
-                    <line x1="8" y1="12" x2="16" y2="12" />
-                    <line x1="10" y1="18" x2="14" y2="18" />
-                  </svg>
-                  Filter
-                </button>
-              </div>
-            </div>
-            <div class="w-full overflow-x-auto">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>VISIT ID</th>
-                    <th>DATE/TIME</th>
-                    <th>VISUAL ACUITY (RE)</th>
-                    <th>VISUAL ACUITY (LE)</th>
-                    <th>ISHIHARA (COLOR)</th>
-                    <th>REMARKS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="link-blue">V-2023-8812</span></td>
-                    <td>14 Oct 2023, 09:15</td>
-                    <td>6/6</td>
-                    <td>6/6</td>
-                    <td><span class="badge badge-green">NORMAL</span></td>
-                    <td style="color: #64748b">
-                      Routine annual check. No issues.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><span class="link-blue">V-2022-7741</span></td>
-                    <td>12 Oct 2022, 11:30</td>
-                    <td>6/6</td>
-                    <td class="vision-acuity-red">6/9</td>
-                    <td><span class="badge badge-green">NORMAL</span></td>
-                    <td style="color: #64748b">
-                      Left eye slight blurring reported.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><span class="link-blue">V-2021-4450</span></td>
-                    <td>05 Oct 2021, 14:20</td>
-                    <td>6/6</td>
-                    <td>6/6</td>
-                    <td><span class="badge badge-green">NORMAL</span></td>
-                    <td style="color: #64748b">
-                      Enrolled into unit transport course.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><span class="link-blue">V-2020-1122</span></td>
-                    <td>03 Oct 2020, 08:45</td>
-                    <td>6/6</td>
-                    <td>6/6</td>
-                    <td><span class="badge badge-green">NORMAL</span></td>
-                    <td style="color: #64748b">Pre-enlistment check.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="table-footer" id="vision-footer">
-              <span>Showing 1 to 4 of 4 entries</span>
-              <div class="pagination" id="vision-pagination">
-                <button class="page-btn active">1</button>
               </div>
             </div>
           </div>
@@ -8094,7 +7962,7 @@
               </table>
             </div>
             <div class="table-footer hidden" id="referrals-footer">
-              <span>Showing 1 to 4 of 4 entries</span>
+              <span>Showing 1 to 2 of 2 entries</span>
               <div class="pagination" id="referrals-pagination">
                 <button class="page-btn active">1</button>
               </div>
@@ -8134,10 +8002,6 @@
             ✕
           </button>
         </div>
-        <!-- <div class="modal-patient-bar">
-          <span class="name">Tan Hong Wei</span
-          ><span class="nric">NRIC: S1234567B</span>
-        </div> -->
         <div class="modal-body">
           <div class="modal-two-col">
             <div class="modal-field">
@@ -8173,22 +8037,7 @@
             </div>
           </div>
           <div class="modal-field">
-            <div
-              class="card-title"
-              style="font-size: 13px; color: #1e4fc4; margin-bottom: 10px"
-            >
-              <svg
-                width="14"
-                height="14"
-                fill="none"
-                stroke="#1e4fc4"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-              </svg>
-              VITALS DURING VISIT
-            </div>
+            <label>Vitals During Visit</label>
             <div class="vitals-grid grid-4 pb-3">
               <div class="vital-box" data-metric="temp" data-type="short">
                 <div class="vl">Temp</div>
@@ -8228,16 +8077,261 @@
                 <div class="vu">mmHg</div>
               </div>
             </div>
-            <!-- <div id="vitals-history-panel" class="vitals-history-panel">
-              <div class="panel-header">
-                <div class="panel-title">
-                  <span id="history-metric-name">Temp</span> History
+          </div>
+          <div class="modal-field">
+            <label>Vision Assessment</label>
+            <div
+              class="flex flex-col rounded-lg border border-gray-200 bg-white p-3 shadow-xs gap-4"
+            >
+              <div class="grid grid-cols-2 gap-3">
+                <div class="modal-field mb-0">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                    >Unaided Visual Acuity (R)</label
+                  >
+                  <div class="val">20/40</div>
+                </div>
+                <div class="modal-field mb-0">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                    >Unaided Visual Acuity (L)</label
+                  >
+                  <div class="val">20/50</div>
+                </div>
+                <div class="modal-field mb-0">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                    >Aided Visual Acuity (R)</label
+                  >
+                  <div class="val">20/20</div>
+                </div>
+                <div class="modal-field mb-0">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                    >Aided Visual Acuity (L)</label
+                  >
+                  <div class="val">20/20</div>
+                </div>
+                <div class="modal-field mb-0 col-span-2">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                    >Ishihara (Color)</label
+                  >
+                  <div class="modal-notes">
+                    38/38 bilaterally. Normal color vision (trichromacy). No
+                    red-green color deficiency noted.
+                  </div>
+                </div>
+                <div class="modal-field mb-0 col-span-2">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                    >Remarks</label
+                  >
+                  <div class="modal-notes">
+                    Patient wears glasses and presents with normal colour
+                    perception and right eye dominance. Corrected visual acuity
+                    reaches 20/20 in both eyes. Subjective refraction shows
+                    minimal change compared to current spectacles, indicating a
+                    stable refractive status.
+                  </div>
                 </div>
               </div>
-
-              <div id="history-timeline" class="history-timeline"></div>
-            </div> -->
+            </div>
           </div>
+          <!-- <div class="modal-field">
+            <label>Vision Assessment</label>
+            <div
+              class="flex flex-col gap-3 rounded-xl bg-[#f8fafc] p-4 border border-gray-200"
+            >
+              <div
+                class="flex flex-col rounded-lg border border-gray-200 bg-white p-3 shadow-xs gap-4"
+              >
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="modal-field mb-0">
+                    <label
+                      class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                      >Bespectacled</label
+                    >
+                    <div class="text-slate-800 font-medium text-[12.5px]">
+                      Yes
+                    </div>
+                  </div>
+                  <div class="modal-field mb-0">
+                    <label
+                      class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                      >Dominant Eye</label
+                    >
+                    <div class="text-slate-800 font-medium text-[12.5px]">
+                      Right Eye
+                    </div>
+                  </div>
+                  <div class="modal-field mb-0">
+                    <label
+                      class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block"
+                      >Colour Perception</label
+                    >
+                    <span class="badge badge-green">NORMAL</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col rounded-lg border border-gray-200 bg-white p-3 shadow-xs gap-4"
+              >
+                <div class="flex flex-col gap-1.5">
+                  <span
+                    class="text-[11px] font-semibold uppercase tracking-wider text-gray-400"
+                  >
+                    Visual Acuity
+                  </span>
+                  <div
+                    class="overflow-hidden border border-gray-200/80 rounded-lg bg-slate-50/30 text-xs"
+                  >
+                    <table class="w-full text-left border-collapse">
+                      <thead>
+                        <tr
+                          class="bg-gray-50/80 border-b border-gray-200/80 text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                        >
+                          <th class="py-2 px-3">Category</th>
+                          <th class="py-2 px-3">Right Eye</th>
+                          <th class="py-2 px-3">Left Eye</th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="divide-y divide-gray-100 text-gray-800 bg-white"
+                      >
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                          <td class="py-2.5 px-3 text-slate-600 font-medium">
+                            Unaided
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600">20/40</td>
+                          <td class="py-2.5 px-3 text-slate-600">20/50</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                          <td class="py-2.5 px-3 text-slate-600 font-medium">
+                            Aided
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600">20/20</td>
+                          <td class="py-2.5 px-3 text-slate-600">20/20</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col rounded-lg border border-gray-200 bg-white p-3 shadow-xs gap-4"
+              >
+                <div class="flex flex-col gap-1.5">
+                  <span
+                    class="text-[11px] font-semibold uppercase tracking-wider text-gray-400"
+                  >
+                    Refraction Measurement
+                  </span>
+                  <div
+                    class="overflow-hidden border border-gray-200/80 rounded-lg bg-slate-50/30 text-xs"
+                  >
+                    <table class="w-full text-left border-collapse">
+                      <thead>
+                        <tr
+                          class="bg-gray-50/80 border-b border-gray-200/80 text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                        >
+                          <th rowspan="2" class="py-2 px-3 border-r">
+                            Category
+                          </th>
+                          <th colspan="3" class="border-r !text-center">
+                            Right Eye
+                          </th>
+                          <th colspan="3" class="border-r !text-center">
+                            Left Eye
+                          </th>
+                        </tr>
+                        <tr
+                          class="bg-gray-50/80 border border-gray-200/80 text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                        >
+                          <th class="w-1/6 !text-center">Sph</th>
+                          <th class="w-1/6 !text-center">Cyl</th>
+                          <th class="w-1/6 border-r !text-center">Axis</th>
+                          <th class="w-1/6 !text-center">Sph</th>
+                          <th class="w-1/6 !text-center">Cyl</th>
+                          <th class="w-1/6 !text-center">Axis</th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="divide-y divide-gray-100 text-gray-800 bg-white"
+                      >
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                          <td class="py-2.5 px-3 text-slate-600 font-medium">
+                            Own Spectacles
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -2.00
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -0.50
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            090
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -1.75
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -0.25
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            100
+                          </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                          <td class="py-2.5 px-3 text-slate-600 font-medium">
+                            Subjective
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -2.00
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -0.50
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            085
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -1.75
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            -0.25
+                          </td>
+                          <td class="py-2.5 px-3 text-slate-600 !text-center">
+                            095
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col rounded-lg border border-gray-200 bg-white p-3 shadow-xs gap-4"
+              >
+                <div class="flex flex-col gap-1.5">
+                  <span
+                    class="text-[11px] font-semibold uppercase tracking-wider text-gray-400"
+                  >
+                    Remarks
+                  </span>
+                  <div
+                    class="bg-[var(--blue-xlight)] border-l-[3px] border-l-[var(--blue-primary)] border-solid p-[12px] rounded-r-[6px] text-[13.5px] text-[var(--gray-700)]"
+                  >
+                    Patient wears glasses and presents with normal colour
+                    perception and right eye dominance. Corrected visual acuity
+                    reaches 20/20 in both eyes. Subjective refraction shows
+                    minimal change compared to current spectacles, indicating a
+                    stable refractive status.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
           <div class="modal-field">
             <label>ASSESSMENT & PLAN</label>
             <div class="diagnosis-box">
@@ -8253,7 +8347,6 @@
           </div>
         </div>
         <div class="modal-footer">
-          <!-- <button class="btn btn-outline">PRINT SUMMARY</button> -->
           <button
             class="btn btn-primary"
             onclick="closeModal('modal-encounter')"
@@ -10084,9 +10177,9 @@
 
         if (applyBtn && resultsTable) {
           applyBtn.addEventListener("click", () => {
-            const typeVal = document
-              .getElementById("filter-visit-type")
-              .value.trim();
+            // const typeVal = document
+            //   .getElementById("filter-visit-type")
+            //   .value.trim();
             const genderVal = document
               .getElementById("filter-gender")
               .value.trim();
@@ -10098,16 +10191,22 @@
             const rows = resultsTable.querySelectorAll("tbody tr");
 
             rows.forEach((row) => {
-              const type = row.cells[2].textContent.trim();
-              const gender = row.cells[3].textContent.trim().toLowerCase();
-              const dob = row.cells[4].textContent.trim();
+              // const type = row.cells[2].textContent.trim();
+              // const gender = row.cells[3].textContent.trim().toLowerCase();
+              // const dob = row.cells[4].textContent.trim();
+              // const dobDate = new Date(dob);
+              // const lastVisitStr = row.cells[5].textContent.trim();
+              // const lastVisitDate = new Date(lastVisitStr);
+
+              const gender = row.cells[2].textContent.trim().toLowerCase();
+              const dob = row.cells[3].textContent.trim();
               const dobDate = new Date(dob);
-              const lastVisitStr = row.cells[5].textContent.trim();
+              const lastVisitStr = row.cells[4].textContent.trim();
               const lastVisitDate = new Date(lastVisitStr);
 
               let show = true;
 
-              if (typeVal && type !== typeVal) show = false;
+              // if (typeVal && type !== typeVal) show = false;
               if (genderVal && gender !== genderVal.toLowerCase()) show = false;
 
               if (dobFromVal || dobToVal) {
@@ -11480,84 +11579,196 @@
       // Vitals
       const vitalsConfig = {
         respiration: {
-          labels: [
-            ["Oct 24", "08:00"],
-            ["Oct 24", "11:15"],
-            ["Oct 25", "14:30"],
+          unit: "breaths/min",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:00"],
+              val: 16,
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "11:15"],
+              val: 18,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "14:30"],
+              val: 15,
+            },
           ],
-          data: [16, 18, 15],
           min: 12,
           max: 20,
         },
         heartRate: {
-          labels: [
-            ["Oct 24", "08:00"],
-            ["Oct 24", "10:00"],
-            ["Oct 25", "14:30"],
+          unit: "bpm",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:00"],
+              val: 72,
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "10:00"],
+              val: 78,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "14:30"],
+              val: 74,
+            },
           ],
-          data: [72, 78, 74],
           min: 60,
           max: 100,
         },
         spO2: {
-          labels: [
-            ["Oct 24", "08:30"],
-            ["Oct 24", "10:30"],
-            ["Oct 25", "12:00"],
+          unit: "%",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:30"],
+              val: 98,
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "10:30"],
+              val: 93,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "12:00"],
+              val: 97,
+            },
           ],
-          data: [98, 93, 97],
           min: 95,
           max: 100,
         },
         temperature: {
-          labels: [
-            ["Oct 24", "08:00"],
-            ["Oct 24", "10:00"],
-            ["Oct 24", "12:00"],
-            ["Oct 25", "14:30"],
+          unit: "°C",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:00"],
+              val: 36.5,
+              location: "Oral",
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "10:00"],
+              val: 37.1,
+              location: "Tympanic",
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "12:00"],
+              val: 36.8,
+              location: "Axillary",
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "14:30"],
+              val: 37.2,
+              location: "Oral",
+            },
           ],
-          data: [36.5, 37.1, 36.8, 37.2],
-          locations: ["Oral", "Tympanic", "Oral", "Oral"],
           min: 36.1,
           max: 37.2,
         },
         bpSystolic: {
-          labels: [
-            ["Oct 24", "12:00"],
-            ["Oct 24", "17:30"],
-            ["Oct 25", "08:30"],
+          unit: "mmHg",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:00"],
+              val: 118,
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "10:00"],
+              val: 135,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "12:00"],
+              val: 120,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "14:30"],
+              val: 125,
+            },
           ],
-          data: [118, 135, 125],
           min: 90,
           max: 130,
         },
         bpDiastolic: {
-          labels: [
-            ["Oct 24", "12:00"],
-            ["Oct 24", "17:30"],
-            ["Oct 25", "08:30"],
+          unit: "mmHg",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:00"],
+              val: 78,
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "10:00"],
+              val: 82,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "12:00"],
+              val: 80,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "14:30"],
+              val: 81,
+            },
           ],
-          data: [78, 82, 80],
           min: 60,
           max: 85,
         },
         bpMean: {
-          labels: [
-            ["Oct 24", "12:00"],
-            ["Oct 24", "17:30"],
-            ["Oct 25", "08:30"],
+          unit: "mmHg",
+          records: [
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "08:00"],
+              val: 91,
+            },
+            {
+              dateStr: "2026-10-24",
+              labelArr: ["24 Oct 2026", "10:00"],
+              val: 95,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "12:00"],
+              val: 93,
+            },
+            {
+              dateStr: "2026-10-25",
+              labelArr: ["25 Oct 2026", "14:30"],
+              val: 94,
+            },
           ],
-          data: [91, 95, 93],
           min: 70,
           max: 100,
         },
       };
 
+      let activeCharts = {};
+
       // --- REUSABLE CHART GENERATOR ---
       function createVitalsChart(canvasId, label, vital) {
+        if (activeCharts[canvasId]) {
+          activeCharts[canvasId].destroy();
+        }
+
         const ctx = document.getElementById(canvasId).getContext("2d");
 
-        return new Chart(ctx, {
+        activeCharts[canvasId] = new Chart(ctx, {
           type: "line",
           data: {
             labels: vital.labels,
@@ -11565,7 +11776,7 @@
               {
                 label: label,
                 data: vital.data,
-                borderColor: "#3b82f6", // Clean Blue Line
+                borderColor: "#3b82f6",
                 backgroundColor: "transparent",
                 borderWidth: 2,
                 tension: 0.35,
@@ -11610,21 +11821,27 @@
                 displayColors: false,
                 callbacks: {
                   title: function (context) {
-                    // Tooltip title joins date and time with space
                     const rawLabel = context[0].label;
                     return Array.isArray(rawLabel)
                       ? rawLabel.join(" ")
                       : rawLabel;
                   },
                   label: function (context) {
-                    if (context.datasetIndex !== 0) return null;
+                    const datasetLabel = context.dataset.label;
                     const val = context.parsed.y;
 
-                    if (vital.locations) {
+                    if (datasetLabel === "Max Threshold")
+                      return `Max Limit: ${val} ${vital.unit}`;
+                    if (datasetLabel === "Min Threshold")
+                      return `Min Limit: ${val} ${vital.unit}`;
+
+                    // Include location if it exists (e.g., for temperature) along with the unit
+                    if (vital.locations && vital.locations[context.dataIndex]) {
                       const location = vital.locations[context.dataIndex];
-                      return `${label}: ${val}°C (${location})`;
+                      return `${label}: ${val} ${vital.unit} (${location})`;
                     }
-                    return `${label}: ${val}`;
+
+                    return `${label}: ${val} ${vital.unit}`;
                   },
                 },
               },
@@ -11644,32 +11861,142 @@
             },
           },
         });
+
+        return activeCharts[canvasId];
       }
 
-      // --- INITIALIZE ALL 7 CHARTS ---
-      createVitalsChart(
-        "chartRespiration",
-        "Respiration",
-        vitalsConfig.respiration,
-      );
-      createVitalsChart("chartHeartRate", "Heart Rate", vitalsConfig.heartRate);
-      createVitalsChart("chartSpO2", "SpO2", vitalsConfig.spO2);
-      createVitalsChart(
-        "chartTemperature",
-        "Temperature",
-        vitalsConfig.temperature,
-      );
-      createVitalsChart(
-        "chartBPSystolic",
-        "BP Systolic",
-        vitalsConfig.bpSystolic,
-      );
-      createVitalsChart(
-        "chartBPDiastolic",
-        "BP Diastolic",
-        vitalsConfig.bpDiastolic,
-      );
-      createVitalsChart("chartBPMean", "BP Mean", vitalsConfig.bpMean);
+      // --- HELPER TO FORMAT DATA & CALL CHART CREATOR ---
+      function prepareAndCreateChart(
+        canvasId,
+        label,
+        rawVitalObj,
+        startDate = null,
+        endDate = null,
+      ) {
+        const filteredRecords = rawVitalObj.records.filter((rec) => {
+          if (startDate && rec.dateStr < startDate) return false;
+          if (endDate && rec.dateStr > endDate) return false;
+          return true;
+        });
+
+        const vitalFormatted = {
+          labels: filteredRecords.map((r) => r.labelArr),
+          data: filteredRecords.map((r) => r.val),
+          unit: rawVitalObj.unit,
+          min: rawVitalObj.min,
+          max: rawVitalObj.max,
+        };
+
+        if (rawVitalObj.records.some((r) => r.location)) {
+          vitalFormatted.locations = filteredRecords.map((r) => r.location);
+        }
+
+        createVitalsChart(canvasId, label, vitalFormatted);
+      }
+
+      // --- RENDER ALL 7 CHARTS ---
+      function renderDashboard(startDate = null, endDate = null) {
+        prepareAndCreateChart(
+          "chartRespiration",
+          "Respiration",
+          vitalsConfig.respiration,
+          startDate,
+          endDate,
+        );
+        prepareAndCreateChart(
+          "chartHeartRate",
+          "Heart Rate",
+          vitalsConfig.heartRate,
+          startDate,
+          endDate,
+        );
+        prepareAndCreateChart(
+          "chartSpO2",
+          "SpO2",
+          vitalsConfig.spO2,
+          startDate,
+          endDate,
+        );
+        prepareAndCreateChart(
+          "chartTemperature",
+          "Temperature",
+          vitalsConfig.temperature,
+          startDate,
+          endDate,
+        );
+        prepareAndCreateChart(
+          "chartBPSystolic",
+          "BP Systolic",
+          vitalsConfig.bpSystolic,
+          startDate,
+          endDate,
+        );
+        prepareAndCreateChart(
+          "chartBPDiastolic",
+          "BP Diastolic",
+          vitalsConfig.bpDiastolic,
+          startDate,
+          endDate,
+        );
+        prepareAndCreateChart(
+          "chartBPMean",
+          "BP Mean",
+          vitalsConfig.bpMean,
+          startDate,
+          endDate,
+        );
+      }
+
+      // --- DOM EVENT LISTENERS FOR DROPDOWN AND FILTERS ---
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtn = document.getElementById("vitals-filter-toggle-btn");
+        const filterPanel = document.getElementById(
+          "vitals-advanced-filter-panel",
+        );
+        const applyBtn = document.getElementById("vitals-apply-filters");
+        const resetBtn = document.getElementById("vitals-reset-filters");
+
+        if (filterBtn && filterPanel) {
+          filterBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            filterPanel.classList.toggle("hidden");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (
+              !filterPanel.contains(e.target) &&
+              !filterBtn.contains(e.target)
+            ) {
+              filterPanel.classList.add("hidden");
+            }
+          });
+        }
+
+        if (applyBtn) {
+          applyBtn.addEventListener("click", () => {
+            const visitFromVal = document.getElementById(
+              "vitals-filter-visit-date-from",
+            ).value;
+            const visitToVal = document.getElementById(
+              "vitals-filter-visit-date-to",
+            ).value;
+            renderDashboard(visitFromVal, visitToVal);
+            if (filterPanel) filterPanel.classList.add("hidden");
+          });
+        }
+
+        if (resetBtn) {
+          resetBtn.addEventListener("click", () => {
+            document.getElementById("vitals-filter-visit-date-from").value = "";
+            document.getElementById("vitals-filter-visit-date-to").value = "";
+            renderDashboard();
+            if (filterPanel) filterPanel.classList.add("hidden");
+          });
+        }
+      });
+
+      // --- INITIAL LOAD ---
+      renderDashboard();
 
       // --- Medical Certification Filter Panel Toggle ---
       document.addEventListener("DOMContentLoaded", function () {
